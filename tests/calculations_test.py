@@ -87,11 +87,9 @@ def test_area_of_circle_negative_radius():
     # Arrange
     radius = -5
 
-    # Act
-    result = area_of_circle(radius)
-
-    # Assert
-    assert result >= 0
+    # Act & Assert
+    with pytest.raises(ValueError):
+      area_of_circle(radius)
 
 
 def test_get_nth_fibonacci_two():
